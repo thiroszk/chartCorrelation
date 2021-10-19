@@ -6,6 +6,7 @@ p-value
 text(0.5, 0.1, sprintf("%g",test$p.value))
 ```
 
+
 regression
 ```
 panel.regression <- function (x, y, col = par("col"), bg = NA, pch = par("pch"),
@@ -17,3 +18,7 @@ panel.regression <- function (x, y, col = par("col"), bg = NA, pch = par("pch"),
     abline(stats::lm(y[ok] ~ x[ok]), col = col.regres, ...)
 }
 ```
+
+You can use this function as below
+chart.Correlation2(df, method = "pearson or kendall or spearman")
+Default method is "pearson". (same as chart.Correlation)
